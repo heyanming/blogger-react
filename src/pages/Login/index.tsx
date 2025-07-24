@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const onFinish = async (values) => {
+  const onFinish = async (values: { username: string; password: string }) => {
     console.log("Success:", values);
     await dispatch(fetchLogin(values));
     //跳转到首页
